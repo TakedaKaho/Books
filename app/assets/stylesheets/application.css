@@ -3,6 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+.home_title {
+    margin:20px;
+}
+p, .Books, .NewBook {
+    margin: 25px;
+}
+table, .input_box  {
+    padding-left: 35px;
+}
+.text_title, .text_body {
+    padding-bottom: 10px;
+}
+
+td, th {
+    padding-bottom: 7px;
+    padding-left: 10px;
+    
+}
+label {
+    margin-bottom: 10px;
+}
+
 .show_title {
     display: flex;
 }
