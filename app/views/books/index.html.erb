@@ -1,20 +1,53 @@
-<h1>Books</h1>
-<div class = "list-box">
- <div class= "title">
+<div class ="Books">
+ <h1>Books</h1>
+ </div>
+ 
+ <table>
+  
+  <thead>
+   <tr>
+   <th>Title</th>
+   <th>Body</th>
+   <th colspan ="3"></th>
+   </tr>
+  </thead>
      
- <h4>Title</h4>
+     <tbody>
+      
     <% @books.each do |book| %>
-    <span><%= book.title %></span>
-    <% end %>
-    </div>
+    <tr>
+    <td><%= book.title %></td>
     
-    <div class = "body">
-    <h4>Body</h4>
-    <% @books.each do |book| %>
-    <span><%= book.body %></span>
-    <%= link_to "Show",book_path(book.id) %><!--|book|と同じ表記！！！　|f|と同じ-->
-    <%= link_to "Edit", edit_book_path(book.id) %>
-    <%= link_to "Destroy",book_path(book.id),method: :delete, "data-confirm" => "Are You Sure?" %>
+    <td><%= book.body %></td>
+    
+    <td><%= link_to "Show",book_path(book.id) %></td><!--|book|と同じ表記！！！　|f|と同じ-->
+    <td><%= link_to "Edit", edit_book_path(book.id) %></td>
+    <td><%= link_to "Destroy",book_path(book.id),method: :delete, "data-confirm" => "Are You Sure?" %></td>
+    </tr>
     <% end %> <!--eachでbookから情報を引いてるからendで切っちゃうとidが反映されない-->
-    </div>
+    
+   </tbody>
+   
+</table>
+
+<h1>New book</h1>
+<div class ="error_message">
+<% if @book.errors.any? %>
+<%= @book.errors.count %>件のエラーが発生しました
+<ul>
+      <li><%= "Error.Title not entered"%></li>
+      <li><%= "Error.Body not entered"%></li>
+  </ul>
+<% end %>
 </div>
+
+<%= form_with model: @book do |f| %>
+
+<h4>Title</h4>
+<%= f.text_field :title %>
+
+<h4>Body</h4>
+<%= f.text_area :body %>
+
+<%= f.submit 'Creare Book' %>
+<% end %>
