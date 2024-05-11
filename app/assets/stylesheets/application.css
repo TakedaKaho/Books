@@ -3,31 +3,79 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+    margin: 40px;
+}
 .home_title {
     margin:20px;
 }
-p, .Books, .NewBook {
+p, .Editing_Book {
     margin: 25px;
 }
-table, .input_box  {
+.input_box, .edit_box  {
     padding-left: 35px;
 }
-.text_title, .text_body {
-    padding-bottom: 10px;
-}
-
 td, th {
     padding-bottom: 7px;
     padding-left: 10px;
-    
-}
-label {
-    margin-bottom: 10px;
 }
 
-.show_title {
-    display: flex;
+p, ol, ul, td {
+    font-size: 15px;
+    line-height: 18px;
+    margin: 33px;
 }
-.show_body {
+
+
+#error_explanation {
+    width: 450px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+    text-align: left;
+    padding: 5px 5px 5px 15px;
+    font-size: 13px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: #fff;
+}
+form { /*フォームは打っただけで勝手にクラスできる。h1とかと一緒*/
+    display: block;
+    margin-top: 0em;
+    margin-bottom: 10px;
+}
+div.field, div.actions {
+    margin-bottom: 10px;
+}
+.field_with_errors {
+    padding: 2px;
+    background-color: red;
+    display: table;
+}
+
+.show_box {
+    margin: 30px 30px 0 80px;
+}
+.show_title, .show_body {
     display: flex;
+    padding-bottom: 35px;
+}
+
+h3 {
+    padding-right: 10px;
+}
+.show_link {
+    padding-left: 30px;
+}
+.edit_title, .edit_body, .edit_submit {
+    padding-bottom: 13px;
+}
+.edit_link {
+    padding-left: 35px;
 }
