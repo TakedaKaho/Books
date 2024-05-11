@@ -12,10 +12,9 @@
     <h4>Body</h4>
     <% @books.each do |book| %>
     <span><%= book.body %></span>
-  <% end %>
-   </div>
-    <!--< link_to "Show",book_path(@book.id) %>-->
-    <!--< link_to "Edit", edit_book_path(@book.id) %>-->
-    <!--< link_to "Destroy",destroy_book_path(@book.id),method: :delete, "data-confirm" => "Are You Sure?" %>-->
-    <!-- %= 抜いてる -->
+    <%= link_to "Show",book_path(book.id) %><!--|book|と同じ表記！！！　|f|と同じ-->
+    <%= link_to "Edit", edit_book_path(book.id) %>
+    <%= link_to "Destroy",book_path(book.id),method: :delete, "data-confirm" => "Are You Sure?" %>
+    <% end %> <!--eachでbookから情報を引いてるからendで切っちゃうとidが反映されない-->
+    </div>
 </div>

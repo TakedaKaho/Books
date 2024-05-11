@@ -1,4 +1,13 @@
 <h1>New book</h1>
+<div class ="error_message">
+<% if @book.errors.any? %>
+<%= @book.errors.count %>件のエラーが発生しました
+<ul>
+      <li><%= "Error.Title not entered"%></li>
+      <li><%= "Error.Body not entered"%></li>
+  </ul>
+<% end %>
+</div>
 
 <%= form_with model: @book do |f| %>
 
