@@ -6,15 +6,7 @@
 body {
     margin: 40px;
 }
-.home_title {
-    margin:20px;
-}
-p, .Editing_Book {
-    margin: 25px;
-}
-.input_box, .edit_box  {
-    padding-left: 35px;
-}
+
 td, th {
     padding-bottom: 7px;
     padding-left: 10px;
@@ -72,10 +64,4 @@ h3 {
 }
 .show_link {
     padding-left: 30px;
-}
-.edit_title, .edit_body, .edit_submit {
-    padding-bottom: 13px;
-}
-.edit_link {
-    padding-left: 35px;
 }
